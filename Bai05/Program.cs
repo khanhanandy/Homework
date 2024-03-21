@@ -22,49 +22,55 @@ namespace Bai05
             }
 
             // Cau 2: In mang du lieu tren theo chieu dao nguoc
-            //Array.Reverse(arr);
-            //Console.WriteLine("Cau 2: Mang sau khi sap xep theo chieu dao nguoc la");
-            //for (int i = 0;i < arr.Length; i++)
-            //{
-            //    Console.WriteLine(arr[i]+"\t");
-            //}
+            Array.Reverse(arr);
+            Console.WriteLine("Cau 2: Mang sau khi sap xep theo chieu dao nguoc la");
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.WriteLine(arr[i] + "\t");
+            }
 
-            // Cau 3: Tim so phan tu giong nhau trong mang va hien thi so luong giong nhau
-            // Cau 4: In cac phan tu duy nhat trong mang
-            //int count = 1;
-            //int[] arr_unique = arr.Distinct().ToArray();
-            //Console.WriteLine($"Cau 4: Cac phan tu duy nhat trong mang la");
-            //for (int i = 0; i < arr_unique.Length; i++)
+            // Cau 3: Tim so phan tu giong nhau trong mang va hien thi so luong giong nhau 
+            //int[] arr_distinct = arr.Distinct().ToArray();
+            //for (int i = 0; i < arr_distinct.Length; i++)
+            //    Console.WriteLine(arr_distinct[i]);
+            //for (int i = 0; i < arr_distinct.Length; i++)
             //{
+            //    int count = 0;
             //    for (int j = 0; j < arr.Length; j++)
             //    {
-            //        if (arr[j] == arr_unique[i]) count += 1;
-
-            //            continue;
+            //        if (arr[j] == arr_distinct[i]) count += 1;
+            //        continue;
             //    }
+            //    if (count > 1) Console.WriteLine($"Cau 3: Phan tu giong nhau trong mang la {arr_distinct[i]} voi so lan xuat hien la {count}");
+            //}
+
+            // Cau 4: In phan tu duy nhat 
+            //int[] arr_distinct = arr.Distinct().ToArray();
+            //for (int i = 0; i < arr_distinct.Length; i++)
+            //    Console.WriteLine(arr_distinct[i]);
+            //for (int i = 0; i < arr_distinct.Length; i++)
+            //{
+
+            //    int count = 0;
+            //    for (int j = 0; j < arr.Length; j++)
+            //    {
+            //        if (arr[j] == arr_distinct[i]) count += 1;
+            //        continue;
+            //    }
+            //    if (count == 1) Console.WriteLine($"Cau 4: Phan tu duy nhat la {arr_distinct[i]}");
             //}
 
             // Cau 5: Chia mang ban dau thanh mang chan va mang le
             int[] arr_odd = new int[] { };
-            int index_odd = 0;
             int[] arr_even = new int[] { };
-            int index_even = 0;
             for (int i = 0; i < arr.Length; i++)
             {
-                if (arr[i] % 2 != 0)
-                {
-                    arr_odd.SetValue(arr[i], index: index_odd);
-                    index_odd += 1;
-                }
-                else
-                {
-                    arr_even.SetValue(arr[i], index: index_even);
-                    index_even += 1;
-                }
-            }
-            for (int i = 0; i < arr_even.Length; i++)
+                if (arr[i] % 2 != 0) arr_odd.Append(arr[i]);
+                else arr_even.Append(arr[i]);
+               }
+            for (int i = 0; i < arr_odd.Length; i++)
             {
-                Console.WriteLine(arr_even[i] + "\t");
+                Console.Write($"Mang le la {arr_odd[i]} + \t");
             }
 
 
