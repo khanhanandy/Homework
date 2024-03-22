@@ -8,9 +8,9 @@ namespace Bai05
 {
     internal class Program
     {
-        public static void PrintArray(int[] arr) 
-        { for (int i = 0;i < arr.Length; i ++)
-                Console.WriteLine(arr[i]);
+        public static void PrintArray(int[] arr_input) 
+        { for (int i = 0;i < arr_input.Length; i ++)
+                Console.WriteLine(arr_input[i]);
         }
 
         static void Main(string[] args)
