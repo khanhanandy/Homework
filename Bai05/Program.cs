@@ -35,8 +35,6 @@ namespace Bai05
             #region Cau 03 Tim so phan tu giong nhau trong mang va hien thi so luong giong nhau 
             //int[] arr_distinct = arr.Distinct().ToArray();
             //for (int i = 0; i < arr_distinct.Length; i++)
-            //    Console.WriteLine(arr_distinct[i]);
-            //for (int i = 0; i < arr_distinct.Length; i++)
             //{
             //    int count = 0;
             //    for (int j = 0; j < arr.Length; j++)
@@ -46,12 +44,17 @@ namespace Bai05
             //    }
             //    if (count > 1) Console.WriteLine($"Cau 3: Phan tu giong nhau trong mang la {arr_distinct[i]} voi so lan xuat hien la {count}");
             //}
+
+            // Sua cau 03
+            //var dup = arr.GroupBy(x => x).Select(x => new { Value = x.Key, Count = x.Count() }) ; 
+            //foreach (var item in dup)
+            //{
+            //    Console.WriteLine($"Gia tri {item.Value} lap lai {item.Count}");
+            //}
             #endregion
 
             #region Cau 04 In cac phan tu duy nhat
             //int[] arr_distinct = arr.Distinct().ToArray();
-            //for (int i = 0; i < arr_distinct.Length; i++)
-            //    Console.WriteLine(arr_distinct[i]);
             //for (int i = 0; i < arr_distinct.Length; i++)
             //{
             //    int count = 0;
@@ -62,6 +65,9 @@ namespace Bai05
             //    }
             //    if (count == 1) Console.WriteLine($"Cau 4: Phan tu duy nhat la {arr_distinct[i]}");
             //}
+
+            // Sua cau 04
+            // var arr_distinct = arr.Distinct();
             #endregion
 
             #region Cau 05  Chia mang ban dau thanh mang chan va mang le
@@ -79,6 +85,15 @@ namespace Bai05
             //Console.WriteLine("Mang chan la");
             // PrintArray(arr_even);
             #endregion
+
+            //Sua cau 05: dung thuat toan LINQ
+            //var sochan = arr.Where(item => item % 2 == 0).OrderBy(x => x).ToArray();
+            //var sole = arr.Where(item => item % 2 != 0).OrderByDescending(x => x).ToArray();
+            //Console.WriteLine("Mang le la");
+            //PrintArray(sochan);
+            //Console.WriteLine("Mang chan la");
+            //PrintArray(sole);
+
 
             #region Cau 06 Sap xep mang theo thu tu giam dan
             //Array.Sort(arr);
