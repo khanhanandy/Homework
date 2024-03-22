@@ -8,6 +8,10 @@ namespace Bai05
 {
     internal class Program
     {
+        public static void PrintArray(int[] arr) 
+        { for (int i = 0;i < arr.Length; i ++)
+                Console.WriteLine(arr[i]);
+        }
 
         static void Main(string[] args)
         {
@@ -22,18 +26,13 @@ namespace Bai05
             }
             #endregion
 
-            #region Cau 02
-            // Cau 2: In mang du lieu tren theo chieu dao nguoc
+            #region Cau 02  In mang du lieu tren theo chieu dao nguoc
             //Array.Reverse(arr);
             //Console.WriteLine("Cau 2: Mang sau khi sap xep theo chieu dao nguoc la");
-            //for (int i = 0; i < arr.Length; i++)
-            //{
-            //    Console.WriteLine(arr[i] + "\t");
-            //}
+            //PrintArray(arr);
             #endregion
 
-            #region Cau 03
-            // Cau 3: Tim so phan tu giong nhau trong mang va hien thi so luong giong nhau 
+            #region Cau 03 Tim so phan tu giong nhau trong mang va hien thi so luong giong nhau 
             //int[] arr_distinct = arr.Distinct().ToArray();
             //for (int i = 0; i < arr_distinct.Length; i++)
             //    Console.WriteLine(arr_distinct[i]);
@@ -49,14 +48,12 @@ namespace Bai05
             //}
             #endregion
 
-            #region Cau 04
-            // Cau 4: In phan tu duy nhat 
+            #region Cau 04 In cac phan tu duy nhat
             //int[] arr_distinct = arr.Distinct().ToArray();
             //for (int i = 0; i < arr_distinct.Length; i++)
             //    Console.WriteLine(arr_distinct[i]);
             //for (int i = 0; i < arr_distinct.Length; i++)
             //{
-
             //    int count = 0;
             //    for (int j = 0; j < arr.Length; j++)
             //    {
@@ -67,8 +64,7 @@ namespace Bai05
             //}
             #endregion
 
-            #region Cau 05
-            // Cau 5: Chia mang ban dau thanh mang chan va mang le
+            #region Cau 05  Chia mang ban dau thanh mang chan va mang le
             //int[] arr_odd = new int[] { };
             //int[] arr_even = new int[] { };
 
@@ -79,31 +75,27 @@ namespace Bai05
             //    else arr_even = arr_even.Concat(new int[] { arr[i] }).ToArray();
             //}
             //Console.WriteLine("Mang le la");
-            //for (int i = 0; i < arr_odd.Length; i++)
-            //{
-            //    Console.Write($"{arr_odd[i]}\t");
-            //}
+            // PrintArray(arr_odd);
             //Console.WriteLine("Mang chan la");
-            //for (int i = 0; i < arr_even.Length; i++)
-            //{
-            //    Console.Write($"{arr_even[i]}\t");
-            //}
-            #endregion Cau 05
+            // PrintArray(arr_even);
+            #endregion
 
-            #region Cau 06
-            // Cau 6: Sap xep mang theo thu tu giam dan
+            #region Cau 06 Sap xep mang theo thu tu giam dan
             //Array.Sort(arr);
             //Array.Reverse(arr);
             //Console.WriteLine("Cau 6: Sap xep mang theo thu tu giam dan la");
-            //for (int i = 0; i < arr.Length; i++)
-            //{
-            //    Console.WriteLine(arr[i] + "\t");
-            //}
+            //PrintArray(arr);
             #endregion
 
-            #region Cau 07
-            // Cau 7: Tim phan tu lon thu 2 trong mang
-            //Console.WriteLine($"Cau 7: Phan tu lon thu 2 trong mang ban dau la {arr[1]}");
+            #region Cau 07 Tim phan tu lon thu 2 trong mang
+            //int[] arr_new = new int[] { };
+            //for (int i = 0; i < arr.Length; ++i)
+            //{
+            //    if (arr[i] == arr.Max())
+            //        continue;
+            //        arr_new = arr_new.Concat(new int[] { arr[i] }).ToArray();
+            //}
+            //Console.WriteLine($"Cau 7: Phan tu lon thu 2 trong mang ban dau la {arr_new.Max()}");
             #endregion
 
             Console.ReadKey();
